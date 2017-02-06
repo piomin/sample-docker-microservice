@@ -40,6 +40,8 @@
 					<dockerDirectory>src/main/docker</dockerDirectory>
 					<dockerHost>https://192.168.99.100:2376</dockerHost>
 					<dockerCertPath>C:\Users\minkowp\.docker\machine\machines\default</dockerCertPath>
+					
+					<pushImage>true</pushImage>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
