@@ -1,0 +1,12 @@
+FROM openjdk:17
+
+RUN mkdir /deployments
+
+ENV JAVA_OPTIONS="-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
+# We make four distinct layers so if there are application changes the library layers can be re-used
+
+COPY target/*.jar /deployments/
+
+EXPOSE 8080
+
+ENTRYPOINT [ "java", "-jar",  "/deployments/quarkus-microservice-1.0-SNAPSHOT-runner.jar" ]
