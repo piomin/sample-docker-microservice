@@ -20,9 +20,9 @@ public class PersonResource {
         this.log = log;
         persons = new ArrayList<>();
         persons.add(new Person(1, "Jan", "Kowalski", 22));
-        persons.add(new Person(1, "Adam", "Malinowski", 33));
-        persons.add(new Person(1, "Tomasz", "Janowski", 25));
-        persons.add(new Person(1, "Alina", "Iksińska", 54));
+        persons.add(new Person(2, "Adam", "Malinowski", 33));
+        persons.add(new Person(3, "Tomasz", "Janowski", 25));
+        persons.add(new Person(4, "Alina", "Iksińska", 54));
     }
 
     @GET

@@ -13,5 +13,5 @@ RUN ["jlink", "--compress=2", \
 FROM alpine:latest
 COPY --from=build  /springboot-runtime /opt/jdk
 ENV PATH=$PATH:/opt/jdk/bin
-COPY ../target/sample-docker-microservice-1.0-SNAPSHOT.jar /opt/app/
-CMD ["java", "-showversion", "-jar", "/opt/app/sample-docker-microservice-1.0-SNAPSHOT.jar"]
+COPY ../target/spring-microservice-1.0-SNAPSHOT.jar /opt/app/
+CMD ["java", "-showversion", "-jar", "/opt/app/spring-microservice-1.0-SNAPSHOT.jar"]
