@@ -9,7 +9,7 @@ import javax.ws.rs.PathParam;
 import java.util.ArrayList;
 import java.util.List;
 
-@ApplicationScoped
+@Path("/persons")
 public class PersonResource {
 
     private Logger log;
