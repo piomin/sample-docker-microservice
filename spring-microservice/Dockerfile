@@ -1,11 +1,11 @@
 FROM alpine:latest AS build
-ENV JAVA_HOME /opt/jdk/jdk-18
+ENV JAVA_HOME /opt/jdk/jdk-21.0.1
 ENV PATH $JAVA_HOME/bin:$PATH
 
-ADD https://download.java.net/java/early_access/alpine/11/binaries/openjdk-18-ea+11_linux-x64-musl_bin.tar.gz /opt/jdk/
-RUN tar -xzvf /opt/jdk/openjdk-18-ea+11_linux-x64-musl_bin.tar.gz -C /opt/jdk/
+ADD https://download.bell-sw.com/java/21.0.1+12/bellsoft-jdk21.0.1+12-linux-x64-musl.tar.gz /opt/jdk/
+RUN tar -xzvf /opt/jdk/bellsoft-jdk21.0.1+12-linux-x64-musl.tar.gz -C /opt/jdk/
 RUN ["jlink", "--compress=2", \
-     "--module-path", "/opt/jdk/jdk-18/jmods/", \
+     "--module-path", "/opt/jdk/jdk-21.0.1/jmods/", \
      "--add-modules", "java.base,java.logging,java.naming,java.xml,java.desktop,jdk.httpserver,jdk.unsupported,java.security.jgss", \
      "--no-header-files", "--no-man-pages", \
      "--output", "/springboot-runtime"]
