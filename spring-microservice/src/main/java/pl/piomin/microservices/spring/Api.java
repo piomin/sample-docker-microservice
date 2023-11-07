@@ -13,28 +13,31 @@ import java.util.logging.Logger;
 @RequestMapping("/persons")
 public class Api {
 
-	protected Logger logger = Logger.getLogger(Api.class.getName());
-	
-	private List<Person> persons;
-	
-	public Api() {
-		persons = new ArrayList<>();
-		persons.add(new Person(1, "Jan", "Kowalski", 22));
-		persons.add(new Person(2, "Adam", "Malinowski", 33));
-		persons.add(new Person(3, "Tomasz", "Janowski", 25));
-		persons.add(new Person(4, "Alina", "Iksińska", 54));
-	}
+    protected Logger logger = Logger.getLogger(Api.class.getName());
 
-	@GetMapping
-	public List<Person> findAll() {
-		logger.info("Api.findAll()");
-		return persons;
-	}
-	
-	@GetMapping("/{id}")
-	public Person findById(@PathVariable("id") Integer id) {
-		logger.info(String.format("Api.findById(%d)", id));
-		return persons.stream().filter(p -> (p.getId().intValue() == id)).findAny().get();
-	}
-	
+    private List<Person> persons;
+
+    public Api() {
+        persons = new ArrayList<>();
+        persons.add(new Person(1, "Jan", "Kowalski", 22));
+        persons.add(new Person(2, "Adam", "Malinowski", 33));
+        persons.add(new Person(3, "Tomasz", "Janowski", 25));
+        persons.add(new Person(4, "Alina", "Iksińska", 54));
+    }
+
+    @GetMapping
+    public List<Person> findAll() {
+        logger.info("Api.findAll()");
+        return persons;
+    }
+
+    @GetMapping("/{id}")
+    public Person findById(@PathVariable("id") Integer id) {
+        logger.info(String.format("Api.findById(%d)", id));
+        return persons.stream()
+                .filter(p -> (p.getId().intValue() == id))
+                .findAny()
+                .orElseThrow();
+    }
+
 }

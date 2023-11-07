@@ -52,6 +52,17 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <image>
+                        <name>quay.io/pminkows/spring-microservice:alpaquita-pack</name>
+                        <builder>bellsoft/buildpacks.builder:musl</builder>
+                        <env>
+                            <BP_JVM_VERSION>17</BP_JVM_VERSION>
+                            <BP_JVM_JLINK_ENABLED>true</BP_JVM_JLINK_ENABLED>
+                            <BP_JVM_JLINK_ARGS>--no-man-pages --no-header-files --strip-debug --compress=2 --add-modules java.base,java.logging,java.naming,java.desktop,jdk.unsupported</BP_JVM_JLINK_ARGS>
+                        </env>
+                    </image>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
