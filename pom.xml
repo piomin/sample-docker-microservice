@@ -1,20 +1,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	
-	<groupId>pl.piomin.microservices</groupId>
-	<artifactId>sample-docker-microservice</artifactId>
-	<packaging>pom</packaging>
-	<version>1.0-SNAPSHOT</version>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<modules>
-		<module>quarkus-microservice</module>
-		<module>spring-microservice</module>
-	</modules>
+    <groupId>pl.piomin.microservices</groupId>
+    <artifactId>sample-docker-microservice</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
 
-	<properties>
-		<sonar.projectKey>piomin_sample-docker-microservice</sonar.projectKey>
-		<sonar.organization>piomin</sonar.organization>
-		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-	</properties>
+    <modules>
+        <module>quarkus-microservice</module>
+        <module>spring-microservice</module>
+    </modules>
+
+    <properties>
+        <sonar.projectKey>piomin_sample-docker-microservice</sonar.projectKey>
+        <sonar.organization>piomin</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    </properties>
 </project>
