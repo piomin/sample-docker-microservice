@@ -1,4 +1,4 @@
-FROM bellsoft/liberica-runtime-container:jdk-21.0.7_9-slim-musl
+FROM bellsoft/liberica-runtime-container:jdk-21.0.7_13-slim-musl
 COPY target/spring-microservice-1.0-SNAPSHOT.jar /opt/app/
 EXPOSE 8080
 CMD ["java", "-showversion", "-jar", "/opt/app/spring-microservice-1.0-SNAPSHOT.jar"]
