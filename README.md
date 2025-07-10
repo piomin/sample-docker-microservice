@@ -13,17 +13,6 @@ A comprehensive comparison project demonstrating identical microservices built w
 - [Overview](#overview)
 - [Project Structure](#project-structure)
 - [Technologies Comparison](#technologies-comparison)
-- [Prerequisites](#prerequisites)
-- [Quick Start](#quick-start)
-- [API Documentation](#api-documentation)
-- [Docker Deployment](#docker-deployment)
-- [Performance Comparison](#performance-comparison)
-- [Development](#development)
-- [Testing](#testing)
-- [CI/CD](#cicd)
-- [Contributing](#contributing)
-- [Resources](#resources)
-- [Author](#author)
 
 ## Overview
 
