@@ -1,4 +1,4 @@
-FROM bellsoft/liberica-runtime-container:jdk-21.0.9_11-slim-musl
+FROM bellsoft/liberica-runtime-container:jdk-25.0.1_11-slim-musl
 
 RUN mkdir /deployments
 
